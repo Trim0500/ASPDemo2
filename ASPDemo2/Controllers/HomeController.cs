@@ -21,7 +21,14 @@ namespace ASPDemo2.Controllers
         [HttpPost]
         public IActionResult Index(Class model)
         {
-            ViewBag.FV = model.CalculateFutureValue();
+            if (ModelState.IsValid)
+            {
+                ViewBag.FV = model.CalculateFutureValue();
+            }
+            else
+            {
+                ViewBag.FV = 0;
+            }
             return View(model);
         }
     }
