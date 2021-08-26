@@ -10,7 +10,7 @@ namespace ASPDemo2.Models
         public decimal MonthlyInvestment { get; set; }
         public decimal YearlyInterestRate { get; set; }
         public int Years { get; set; }
-        public decimal ClaculateFutureValue()
+        public decimal CalculateFutureValue()
         {
             int months = Years * 12;
             decimal monthlyInterestRate = YearlyInterestRate / 12 / 100;
